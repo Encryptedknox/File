@@ -100,7 +100,7 @@ async def private_receive_handler(c: Client, m: Message):
         stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
        
-        msg_text ="""<i><u>🔲Your Link Generated🔲 !◽</u></i>\n\n<b>◽File Name :</b> <i>{}</i>\n\n<b>◽File Size :</b> <i>{}</i>\n\n<b>◽Download :</b> <i>{}</i>\n\n<b> ◽Watch  :</b> <i>{}</i>\n\n<b>🔺 Note : LINK WON'T EXPIRE TILL I DELETE</b>"""
+        msg_text ="""<i><u>◻️ Your Link Generated ◻️</u></i>\n\n<b>◽File Name :</b> <i>{}</i>\n\n<b>◽File Size :</b> <i>{}</i>\n\n<b>◽Download :</b> <i>{}</i>\n\n<b> ◽Watch  :</b> <i>{}</i>\n\n<b>🔺 Note : LINK WON'T EXPIRE TILL I DELETE</b>"""
 
         await log_msg.reply_text(text=f"**Requested User:** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**User ID:** `{m.from_user.id}`\n**Stream Link :** {stream_link}", disable_web_page_preview=True,  quote=True)
         await m.reply_text(
